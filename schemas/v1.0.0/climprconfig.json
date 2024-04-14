@@ -1,0 +1,26 @@
+{
+  "$id": "https://raw.githubusercontent.com/devoteamcloudify/climpr-schemas/main/schemas/v1.0.0/climprconfig.json#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [],
+  "unevaluatedProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri-reference",
+      "default": "https://raw.githubusercontent.com/devoteamcloudify/climpr-schemas/main/schemas/v1.0.0/climprconfig.json#"
+    },
+    "lzManagement": {
+      "$ref": "./lz-management/climprconfig.lzmanagement.json#"
+    },
+    "policyManagement": {
+      "$ref": "./policy-management/climprconfig.policymanagement.json#"
+    },
+    "quickstartManagement": {
+      "$ref": "./quickstart-management/climprconfig.quickstartmanagement.json#"
+    },
+    "workloadManagement": {
+      "$ref": "./workload-management/climprconfig.workloadmanagement.json#"
+    }
+  }
+}

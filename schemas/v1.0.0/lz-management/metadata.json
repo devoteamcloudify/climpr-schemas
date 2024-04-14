@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "organization",
+    "repoName"
+  ],
+  "unevaluatedProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "disableWorkloadRepoTemplateSync": {
+      "type": "boolean",
+      "default": false
+    },
+    "organization": {
+      "type": "string"
+    },
+    "repoName": {
+      "type": "string"
+    },
+    "repoDescription": {
+      "type": "string"
+    },
+    "repoTemplate": {
+      "type": "string"
+    },
+    "access": {
+      "$ref": "github-api.json#/$defs/access"
+    },
+    "environments": {
+      "type": "array",
+      "unevaluatedProperties": false,
+      "items": {
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "unevaluatedProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "branchPolicyPatterns": {
+            "$ref": "github-api.json#/$defs/branchPolicyPatterns"
+          },
+          "branchProtection": {
+            "$ref": "github-api.json#/$defs/branchProtection"
+          },
+          "codeOwners": {
+            "$ref": "github-api.json#/$defs/codeOwners"
+          },
+          "runProtection": {
+            "$ref": "github-api.json#/$defs/runProtection"
+          },
+          "azure": {
+            "type": "object",
+            "required": [
+              "archetype"
+            ],
+            "unevaluatedProperties": false,
+            "properties": {
+              "archetype": {
+                "type": "string"
+              }
+            },
+            "if": {
+              "properties": {
+                "archetype": {
+                  "not": {
+                    "const": "no-lz"
+                  }
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "subscriptionName",
+                "parentManagementGroupId",
+                "billingProfileDisplayName",
+                "invoiceSectionDisplayName"
+              ],
+              "properties": {
+                "subscriptionName": {
+                  "type": "string"
+                },
+                "parentManagementGroupId": {
+                  "type": "string"
+                },
+                "billingProfileDisplayName": {
+                  "type": "string"
+                },
+                "invoiceSectionDisplayName": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$id": "climprconfig.quickstartmanagement.json#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "All properties related to the quickstart management feature configuration.",
+  "type": "object",
+  "required": [],
+  "unevaluatedProperties": false,
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "description": "!!! NOT IN USE YET - Enables or disables the quickstart-management features.",
+      "default": false
+    }
+  }
+}
