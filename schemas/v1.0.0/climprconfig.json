@@ -7,8 +7,7 @@
   "properties": {
     "$schema": {
       "type": "string",
-      "format": "uri-reference",
-      "default": "https://raw.githubusercontent.com/devoteamcloudify/climpr-schemas/main/schemas/v1.0.0/climprconfig.json#"
+      "format": "uri-reference"
     },
     "lzManagement": {
       "$ref": "./lz-management/climprconfig.lzmanagement.json#"
