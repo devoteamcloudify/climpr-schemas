@@ -69,7 +69,7 @@
     },
     {
       "fileMatch": [
-        "**/workloads/*/deploymentconfig.json"
+        "**/workloads/**/deploymentconfig.json"
       ],
       "url": "https://raw.githubusercontent.com/devoteamcloudify/climpr-schemas/main/schemas/v1.0.0/workload-management/deploymentconfig.json#"
     }
