@@ -1,6 +1,7 @@
 {
   "$id": "climprconfig.policymanagement.json#",
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Climpr Policy Management Configuration schema",
   "description": "All properties related to the policy management feature configuration.",
   "type": "object",
   "required": [

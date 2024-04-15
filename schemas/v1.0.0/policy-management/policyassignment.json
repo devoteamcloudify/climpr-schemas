@@ -1,6 +1,8 @@
 {
   "$id": "https://raw.githubusercontent.com/devoteamcloudify/climpr-schemas/main/schemas/v1.0.0/policy-management/policyassignment.json#",
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Policy Assignment schema",
+  "description": "The schema for Policy Assignments (Microsoft.Authorization/policyAssignments)",
   "type": "object",
   "required": [
     "name",

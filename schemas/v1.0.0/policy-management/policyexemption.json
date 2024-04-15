@@ -1,8 +1,9 @@
 {
   "$id": "https://raw.githubusercontent.com/devoteamcloudify/climpr-schemas/main/schemas/v1.0.0/policy-management/policyexemption.json#",
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Policy Exemption schema",
+  "description": "The schema for Policy Exemptions (Microsoft.Authorization/policyExemptions)",
   "type": "object",
-  "description": "Microsoft.Authorization/policyExemptions",
   "required": [
     "name",
     "scope",

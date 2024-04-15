@@ -1,6 +1,8 @@
 {
   "$id": "github-api.json#",
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema for the GitHub REST API",
+  "description": "The schema for the GitHub REST API",
   "type": "object",
   "unevaluatedProperties": false,
   "$defs": {

@@ -1,6 +1,8 @@
 {
   "$id": "https://raw.githubusercontent.com/devoteamcloudify/climpr-schemas/main/schemas/v1.0.0/policy-management/policydefinition.json#",
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Policy Definition schema",
+  "description": "The schema for Policy Definitions (Microsoft.Authorization/policyDefinitions)",
   "type": "object",
   "required": [
     "name",

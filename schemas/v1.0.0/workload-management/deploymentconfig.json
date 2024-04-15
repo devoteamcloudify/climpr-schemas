@@ -1,6 +1,8 @@
 {
   "$id": "https://raw.githubusercontent.com/devoteamcloudify/climpr-schemas/main/schemas/v1.0.0/workload-management/deploymentconfig.json#",
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Deployment configuration for workload deployments",
+  "description": "The schema for the deployment configuration file used for Climpr workloads",
   "type": "object",
   "required": [],
   "unevaluatedProperties": false,
