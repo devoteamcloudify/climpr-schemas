@@ -6,6 +6,14 @@
   "type": "object",
   "required": [],
   "unevaluatedProperties": false,
+  "dependentRequired": {
+    "resourceGroupName": [
+      "location"
+    ],
+    "managementGroupId": [
+      "location"
+    ]
+  },
   "properties": {
     "$schema": {
       "type": "string",
@@ -45,15 +53,20 @@
     },
     "location": {
       "type": "string",
-      "description": "The location for the deployment. This is optional has an organization default if not specified. This property is valid for Tenant, Management Group and Subscription scoped deployments."
+      "description": "The location for the deployment. This is optional has an organization default if not specified. This property is valid for Tenant, Management Group and Subscription scoped deployments.",
+      "minLength": 1
     },
     "resourceGroupName": {
       "type": "string",
-      "description": "The target Resource Group Name for the deployment. This property is only valid in Resource Group scoped deployments."
+      "description": "The target Resource Group Name for the deployment. This property is only valid in Resource Group scoped deployments.",
+      "minLength": 1,
+      "maxLength": 90
     },
     "managementGroupId": {
       "type": "string",
-      "description": "The target Management Group Name for the deployment. This property is only valid in Management Group scoped deployments."
+      "description": "The target Management Group Name for the deployment. This property is only valid in Management Group scoped deployments.",
+      "minLength": 1,
+      "maxLength": 90
     },
     "azureCliVersion": {
       "type": "string",
