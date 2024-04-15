@@ -19,7 +19,7 @@
   "powershell.codeFormatting.whitespaceInsideBrace": true,
   "files.associations": {
     "climprconfig.json": "jsonc",
-    "**/workloads/*/deploymentconfig.json": "jsonc",
+    "**/workloads/**/deploymentconfig.json": "jsonc",
     "**/policy-management/**/*.json": "jsonc",
     "**/lz-management/**/metadata.json": "jsonc",
     "**/lz-management/**/*.existingVnetIds.json": "jsonc",
