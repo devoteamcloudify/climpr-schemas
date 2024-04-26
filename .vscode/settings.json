@@ -19,7 +19,7 @@
   "powershell.codeFormatting.whitespaceInsideBrace": true,
   "files.associations": {
     "climprconfig.json": "jsonc",
-    "**/workloads/**/deploymentconfig.json": "jsonc",
+    "**/deploymentconfig.json": "jsonc",
     "**/policy-management/**/*.json": "jsonc",
     "**/lz-management/**/metadata.json": "jsonc",
     "**/lz-management/**/*.existingVnetIds.json": "jsonc",
@@ -30,6 +30,12 @@
         "climprconfig.json"
       ],
       "url": "https://raw.githubusercontent.com/devoteamcloudify/climpr-schemas/main/schemas/v1.0.0/climprconfig.json#"
+    },
+    {
+      "fileMatch": [
+        "**/deploymentconfig.json"
+      ],
+      "url": "https://raw.githubusercontent.com/devoteamcloudify/climpr-schemas/main/schemas/v1.0.0/workload-management/deploymentconfig.json#"
     },
     {
       "fileMatch": [
@@ -66,12 +72,6 @@
         "**/policy-management/**/exemptions/*.json"
       ],
       "url": "https://raw.githubusercontent.com/devoteamcloudify/climpr-schemas/main/schemas/v1.0.0/policy-management/policyexemption.json#"
-    },
-    {
-      "fileMatch": [
-        "**/workloads/**/deploymentconfig.json"
-      ],
-      "url": "https://raw.githubusercontent.com/devoteamcloudify/climpr-schemas/main/schemas/v1.0.0/workload-management/deploymentconfig.json#"
     }
   ]
 }
