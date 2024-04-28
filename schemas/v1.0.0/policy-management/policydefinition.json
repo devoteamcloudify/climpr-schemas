@@ -8,7 +8,7 @@
     "name",
     "properties"
   ],
-  "unevaluatedProperties": false,
+  "additionalProperties": false,
   "properties": {
     "name": {
       "type": "string",
@@ -26,7 +26,7 @@
         "policyRule",
         "policyType"
       ],
-      "unevaluatedProperties": false,
+      "additionalProperties": false,
       "allOf": [
         {
           "anyOf": [
@@ -55,7 +55,7 @@
               }
             },
             "parameters": {
-              "unevaluatedProperties": false,
+              "additionalProperties": false,
               "patternProperties": {
                 ".*": {
                   "required": [

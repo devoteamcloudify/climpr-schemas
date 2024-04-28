@@ -7,7 +7,7 @@
     "organization",
     "repoName"
   ],
-  "unevaluatedProperties": false,
+  "additionalProperties": false,
   "properties": {
     "$schema": {
       "type": "string",
@@ -34,13 +34,13 @@
     },
     "environments": {
       "type": "array",
-      "unevaluatedProperties": false,
+      "additionalProperties": false,
       "items": {
         "type": "object",
         "required": [
           "name"
         ],
-        "unevaluatedProperties": false,
+        "additionalProperties": false,
         "properties": {
           "name": {
             "type": "string"
@@ -62,7 +62,7 @@
             "required": [
               "archetype"
             ],
-            "unevaluatedProperties": false,
+            "additionalProperties": false,
             "properties": {
               "archetype": {
                 "type": "string"

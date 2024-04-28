@@ -9,7 +9,7 @@
     "scope",
     "properties"
   ],
-  "unevaluatedProperties": false,
+  "additionalProperties": false,
   "properties": {
     "name": {
       "type": "string",
@@ -24,7 +24,7 @@
       "required": [
         "policyDefinitionId"
       ],
-      "unevaluatedProperties": false,
+      "additionalProperties": false,
       "allOf": [
         {
           "$ref": "https://schema.management.azure.com/schemas/2021-06-01/Microsoft.Authorization.Resources.json#/unknown_resourceDefinitions/policyAssignments/properties/properties"
@@ -32,7 +32,7 @@
         {
           "properties": {
             "parameters": {
-              "unevaluatedProperties": false,
+              "additionalProperties": false,
               "patternProperties": {
                 ".*": {
                   "oneOf": [
@@ -40,7 +40,7 @@
                       "required": [
                         "value"
                       ],
-                      "unevaluatedProperties": false,
+                      "additionalProperties": false,
                       "properties": {
                         "value": {}
                       }
@@ -49,7 +49,7 @@
                       "required": [
                         "reference"
                       ],
-                      "unevaluatedProperties": false,
+                      "additionalProperties": false,
                       "properties": {
                         "reference": {
                           "type": "object",
@@ -57,14 +57,14 @@
                             "keyVault",
                             "secretName"
                           ],
-                          "unevaluatedProperties": false,
+                          "additionalProperties": false,
                           "properties": {
                             "keyVault": {
                               "type": "object",
                               "required": [
                                 "id"
                               ],
-                              "unevaluatedProperties": false,
+                              "additionalProperties": false,
                               "properties": {
                                 "id": {
                                   "type": "string"
@@ -87,7 +87,7 @@
       ]
     },
     "identity": {
-      "unevaluatedProperties": false,
+      "additionalProperties": false,
       "$ref": "https://schema.management.azure.com/schemas/2021-06-01/Microsoft.Authorization.Resources.json#/unknown_resourceDefinitions/policyAssignments/properties/identity",
       "required": [
         "type"
@@ -106,7 +106,7 @@
       }
     },
     "location": {
-      "unevaluatedProperties": false,
+      "additionalProperties": false,
       "$ref": "https://schema.management.azure.com/schemas/2021-06-01/Microsoft.Authorization.Resources.json#/unknown_resourceDefinitions/policyAssignments/properties/location"
     },
     "roleAssignments": {
@@ -118,7 +118,7 @@
           "roleDefinitionId",
           "description"
         ],
-        "unevaluatedProperties": false,
+        "additionalProperties": false,
         "properties": {
           "scope": {
             "type": "string",

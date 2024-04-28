@@ -5,7 +5,7 @@
   "description": "The configuration file for configuring Climpr",
   "type": "object",
   "required": [],
-  "unevaluatedProperties": false,
+  "additionalProperties": false,
   "properties": {
     "$schema": {
       "type": "string",

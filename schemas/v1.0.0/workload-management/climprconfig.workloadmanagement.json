@@ -5,7 +5,7 @@
   "description": "All properties related to the workload management feature configuration.",
   "type": "object",
   "required": [],
-  "unevaluatedProperties": false,
+  "additionalProperties": false,
   "properties": {
     "enabled": {
       "type": "boolean",

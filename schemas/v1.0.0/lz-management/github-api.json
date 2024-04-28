@@ -4,17 +4,17 @@
   "title": "Schema for the GitHub REST API",
   "description": "The schema for the GitHub REST API",
   "type": "object",
-  "unevaluatedProperties": false,
+  "additionalProperties": false,
   "$defs": {
     "access": {
       "type": "object",
-      "unevaluatedProperties": false,
+      "additionalProperties": false,
       "properties": {
         "collaborators": {
           "type": "object",
           "properties": {
             "type": "object",
-            "unevaluatedProperties": false,
+            "additionalProperties": false,
             "properties": {
               "type": "array",
               "items": {
@@ -27,7 +27,7 @@
           "type": "object",
           "properties": {
             "type": "object",
-            "unevaluatedProperties": false,
+            "additionalProperties": false,
             "properties": {
               "type": "array",
               "items": {
@@ -40,13 +40,13 @@
     },
     "branchPolicyPatterns": {
       "type": "array",
-      "unevaluatedProperties": false,
+      "additionalProperties": false,
       "items": {
         "type": "object",
         "required": [
           "name"
         ],
-        "unevaluatedProperties": false,
+        "additionalProperties": false,
         "properties": {
           "name": {
             "type": "string"
@@ -63,7 +63,7 @@
     },
     "branchProtection": {
       "type": "object",
-      "unevaluatedProperties": false,
+      "additionalProperties": false,
       "required": [
         "required_status_checks",
         "enforce_admins",
@@ -80,7 +80,7 @@
             "strict",
             "contexts"
           ],
-          "unevaluatedProperties": false,
+          "additionalProperties": false,
           "properties": {
             "strict": {
               "type": "boolean"
@@ -98,7 +98,7 @@
                 "required": [
                   "context"
                 ],
-                "unevaluatedProperties": false,
+                "additionalProperties": false,
                 "properties": {
                   "context": {
                     "type": "string"
@@ -122,11 +122,11 @@
             "object",
             "null"
           ],
-          "unevaluatedProperties": false,
+          "additionalProperties": false,
           "properties": {
             "dismissal_restrictions": {
               "type": "object",
-              "unevaluatedProperties": false,
+              "additionalProperties": false,
               "properties": {
                 "users": {
                   "type": "array",
@@ -162,7 +162,7 @@
             },
             "bypass_pull_request_allowances": {
               "type": "object",
-              "unevaluatedProperties": false,
+              "additionalProperties": false,
               "properties": {
                 "users": {
                   "type": "array",
@@ -195,7 +195,7 @@
             "users",
             "teams"
           ],
-          "unevaluatedProperties": false,
+          "additionalProperties": false,
           "properties": {
             "users": {
               "type": "array",
@@ -245,14 +245,14 @@
     },
     "codeOwners": {
       "type": "array",
-      "unevaluatedProperties": false,
+      "additionalProperties": false,
       "items": {
         "type": "string"
       }
     },
     "runProtection": {
       "type": "object",
-      "unevaluatedProperties": false,
+      "additionalProperties": false,
       "properties": {
         "wait_timer": {
           "type": "integer"
@@ -264,7 +264,7 @@
           "type": "array",
           "items": {
             "type": "object",
-            "unevaluatedProperties": false,
+            "additionalProperties": false,
             "properties": {
               "type": {
                 "type": "string",
@@ -285,7 +285,7 @@
             "protected_branches",
             "custom_branch_policies"
           ],
-          "unevaluatedProperties": false,
+          "additionalProperties": false,
           "properties": {
             "protected_branches": {
               "type": "boolean"

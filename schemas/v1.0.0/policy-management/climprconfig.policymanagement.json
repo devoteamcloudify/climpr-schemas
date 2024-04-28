@@ -12,7 +12,7 @@
     "ignoredPolicyCreatorIdentities",
     "remediationConfig"
   ],
-  "unevaluatedProperties": false,
+  "additionalProperties": false,
   "properties": {
     "enabled": {
       "type": "boolean",
@@ -54,7 +54,7 @@
             ]
           }
         ],
-        "unevaluatedProperties": false,
+        "additionalProperties": false,
         "properties": {
           "description": {
             "type": "string"
@@ -70,7 +70,7 @@
     },
     "remediationConfig": {
       "type": "object",
-      "unevaluatedProperties": false,
+      "additionalProperties": false,
       "required": [
         "enabled",
         "defaultIncludeFilterPatterns"
@@ -104,7 +104,7 @@
               "scope",
               "description"
             ],
-            "unevaluatedProperties": false,
+            "additionalProperties": false,
             "properties": {
               "name": {
                 "type": "string",

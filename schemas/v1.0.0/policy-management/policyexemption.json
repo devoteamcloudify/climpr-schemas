@@ -9,7 +9,7 @@
     "scope",
     "properties"
   ],
-  "unevaluatedProperties": false,
+  "additionalProperties": false,
   "properties": {
     "name": {
       "type": "string",
@@ -20,7 +20,7 @@
       "description": "The scope where the exemption will be deployed. Azure resource id. Supports all scope types, resources, resourceGroups, subscriptions and managementGroups."
     },
     "properties": {
-      "unevaluatedProperties": false,
+      "additionalProperties": false,
       "allOf": [
         {
           "$ref": "https://raw.githubusercontent.com/Azure/azure-resource-manager-schemas/393ce6d0712168f133321e588c34023ccb2adbcd/schemas/2022-07-01-preview/Microsoft.Authorization.Resources.json#/unknown_resourceDefinitions/policyExemptions/properties/properties"

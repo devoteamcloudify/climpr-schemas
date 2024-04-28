@@ -4,7 +4,7 @@
   "title": "Existing VNet Ids schema",
   "description": "A list of existing VNet resource Ids",
   "type": "array",
-  "unevaluatedProperties": false,
+  "additionalProperties": false,
   "items": {
     "type": "string"
   }
