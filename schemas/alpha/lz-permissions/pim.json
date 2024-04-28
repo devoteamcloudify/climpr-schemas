@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "lz-permissions-static.json#",
-  "title": "Landing Zone static role assignments schema",
-  "description": "The configuration file used to define static role assignments for a Landing Zone (Azure Subscription)",
+  "$id": "pim.json#",
+  "title": "Landing Zone PIM role assignments schema",
+  "description": "The configuration file used to define PIM role assignments for a Landing Zone (Azure Subscription)",
   "type": "object",
   "additionalProperties": false,
   "patternProperties": {
@@ -73,6 +73,10 @@
               "group",
               "servicePrincipal"
             ]
+          },
+          "expirationDate": {
+            "type": "string",
+            "pattern": "^(3[01]|[012][0-9])(\\.)(0[1-9]|1[0-2])\\2([0-9]{4})$"
           }
         }
       }
