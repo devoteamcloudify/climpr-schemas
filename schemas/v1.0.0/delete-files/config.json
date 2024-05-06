@@ -1,0 +1,52 @@
+{
+  "$id": "https://raw.githubusercontent.com/devoteamcloudify/climpr-schemas/main/schemas/v1.0.0/delete-files/config.json#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Configuration file for the 'delete-files' action.",
+  "description": "The schema for the configuration file for the 'delete-files' action.",
+  "type": "object",
+  "required": [
+    "$schema",
+    "patternsToExclude",
+    "filesToDelete"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "The reference to the json schema.",
+      "format": "uri-reference"
+    },
+    "patternsToExclude": {
+      "type": "array",
+      "description": "A list of Regex patterns used to exclude files and directories from processing.",
+      "items": {
+        "type": "string",
+        "format": "Regex"
+      }
+    },
+    "filesToDelete": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "A list of files to delete. A file can have multiple hashes to match multiple versions of the file.",
+        "required": [
+          "path",
+          "hashes"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "An absolute or relative path to the file to delete."
+          },
+          "hashes": {
+            "type": "array",
+            "description": "A list of hashes used to match files based on the actual contents. Use 'Get-FileHash' in PowerShell to find the hash of a file.",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
