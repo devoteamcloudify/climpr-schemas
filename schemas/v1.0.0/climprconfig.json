@@ -22,6 +22,9 @@
     },
     "workloadManagement": {
       "$ref": "./workload-management/climprconfig.workloadmanagement.json#"
+    },
+    "bicepDeployment": {
+      "$ref": "./bicep-deployment/climprconfig.bicepdeployment.json#"
     }
   }
 }
