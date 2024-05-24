@@ -39,6 +39,12 @@
     },
     {
       "fileMatch": [
+        "**/publishconfig.json"
+      ],
+      "url": "https://raw.githubusercontent.com/devoteamcloudify/climpr-schemas/main/schemas/v1.0.0/bicep-module-publish/publishconfig.json#"
+    },
+    {
+      "fileMatch": [
         "**/lz-management/**/metadata.json"
       ],
       "url": "https://raw.githubusercontent.com/devoteamcloudify/climpr-schemas/main/schemas/v1.0.0/lz-management/metadata.json#"
