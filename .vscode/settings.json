@@ -20,6 +20,7 @@
   "files.associations": {
     "climprconfig.json": "jsonc",
     "**/deploymentconfig.json": "jsonc",
+    "**/publishconfig.json": "jsonc",
     "**/policy-management/**/*.json": "jsonc",
     "**/lz-management/**/metadata.json": "jsonc",
     "**/lz-management/**/*.existingVnetIds.json": "jsonc",
