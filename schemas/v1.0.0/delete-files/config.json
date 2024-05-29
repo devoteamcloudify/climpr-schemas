@@ -5,7 +5,6 @@
   "description": "The schema for the configuration file for the 'delete-files' action.",
   "type": "object",
   "required": [
-    "$schema",
     "patternsToExclude",
     "filesToDelete"
   ],
@@ -29,23 +28,53 @@
         "type": "object",
         "description": "A list of files to delete. A file can have multiple hashes to match multiple versions of the file.",
         "required": [
-          "path",
-          "hashes"
+          "path"
         ],
         "additionalProperties": false,
-        "properties": {
-          "path": {
-            "type": "string",
-            "description": "An absolute or relative path to the file to delete."
+        "path": {
+          "type": "string",
+          "description": "An absolute or relative path to the file to delete."
+        },
+        "oneOf": [
+          {
+            "required": [
+              "hash"
+            ],
+            "properties": {
+              "hash": {
+                "$ref": "#/definitions/hash"
+              }
+            }
           },
-          "hashes": {
-            "type": "array",
-            "description": "A list of hashes used to match files based on the actual contents. Use 'Get-FileHash' in PowerShell to find the hash of a file.",
-            "items": {
-              "type": "string"
+          {
+            "required": [
+              "hashes"
+            ],
+            "properties": {
+              "hashes": {
+                "$ref": "#/definitions/hashes"
+              }
             }
           }
-        }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "hash": {
+      "type": "string",
+      "description": "The hash used to match files based on the actual contents. Use 'Get-FileHash' in PowerShell to find the hash of a file.",
+      "items": {
+        "type": "string",
+        "format": "regex",
+        "pattern": "^[0-9A-F]{64}$"
+      }
+    },
+    "hashes": {
+      "type": "array",
+      "description": "A list of hashes used to match files based on the actual contents. Use 'Get-FileHash' in PowerShell to find the hash of a file.",
+      "items": {
+        "$ref": "#/definitions/hash"
       }
     }
   }
