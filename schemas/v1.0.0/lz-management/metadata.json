@@ -17,6 +17,10 @@
       "type": "boolean",
       "default": false
     },
+    "disableUpdateLzRepoFiles": {
+      "type": "boolean",
+      "default": false
+    },
     "organization": {
       "type": "string"
     },
