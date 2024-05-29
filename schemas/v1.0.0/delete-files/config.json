@@ -19,7 +19,7 @@
       "description": "A list of Regex patterns used to exclude files and directories from processing.",
       "items": {
         "type": "string",
-        "format": "Regex"
+        "format": "regex"
       }
     },
     "filesToDelete": {
@@ -27,20 +27,17 @@
       "items": {
         "type": "object",
         "description": "A list of files to delete. A file can have multiple hashes to match multiple versions of the file.",
-        "required": [
-          "path"
-        ],
-        "additionalProperties": false,
-        "path": {
-          "type": "string",
-          "description": "An absolute or relative path to the file to delete."
-        },
         "oneOf": [
           {
             "required": [
+              "path",
               "hash"
             ],
+            "additionalProperties": false,
             "properties": {
+              "path": {
+                "$ref": "#/definitions/path"
+              },
               "hash": {
                 "$ref": "#/definitions/hash"
               }
@@ -48,9 +45,14 @@
           },
           {
             "required": [
+              "path",
               "hashes"
             ],
+            "additionalProperties": false,
             "properties": {
+              "path": {
+                "$ref": "#/definitions/path"
+              },
               "hashes": {
                 "$ref": "#/definitions/hashes"
               }
@@ -60,7 +62,11 @@
       }
     }
   },
-  "$defs": {
+  "definitions": {
+    "path": {
+      "type": "string",
+      "description": "An absolute or relative path to the file to delete."
+    },
     "hash": {
       "type": "string",
       "description": "The hash used to match files based on the actual contents. Use 'Get-FileHash' in PowerShell to find the hash of a file.",
