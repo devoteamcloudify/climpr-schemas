@@ -54,7 +54,11 @@
                 "$ref": "#/definitions/path"
               },
               "hashes": {
-                "$ref": "#/definitions/hashes"
+                "type": "array",
+                "description": "A list of hashes used to match files based on the actual contents. Use 'Get-FileHash' in PowerShell to find the hash of a file.",
+                "items": {
+                  "$ref": "#/definitions/hash"
+                }
               }
             }
           }
@@ -74,13 +78,6 @@
         "type": "string",
         "format": "regex",
         "pattern": "^[0-9A-F]{64}$"
-      }
-    },
-    "hashes": {
-      "type": "array",
-      "description": "A list of hashes used to match files based on the actual contents. Use 'Get-FileHash' in PowerShell to find the hash of a file.",
-      "items": {
-        "$ref": "#/definitions/hash"
       }
     }
   }
