@@ -63,46 +63,50 @@
           },
           "azure": {
             "type": "object",
-            "required": [
-              "archetype"
-            ],
-            "additionalProperties": false,
-            "properties": {
-              "archetype": {
-                "type": "string"
-              }
-            },
-            "if": {
-              "properties": {
-                "archetype": {
-                  "not": {
+            "oneOf": [
+              {
+                "required": [
+                  "archetype"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "archetype": {
+                    "type": "string",
                     "const": "no-lz"
                   }
                 }
-              }
-            },
-            "then": {
-              "required": [
-                "subscriptionName",
-                "parentManagementGroupId",
-                "billingProfileDisplayName",
-                "invoiceSectionDisplayName"
-              ],
-              "properties": {
-                "subscriptionName": {
-                  "type": "string"
-                },
-                "parentManagementGroupId": {
-                  "type": "string"
-                },
-                "billingProfileDisplayName": {
-                  "type": "string"
-                },
-                "invoiceSectionDisplayName": {
-                  "type": "string"
+              },
+              {
+                "required": [
+                  "archetype",
+                  "subscriptionName",
+                  "parentManagementGroupId",
+                  "billingProfileDisplayName",
+                  "invoiceSectionDisplayName"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "archetype": {
+                    "type": "string",
+                    "not": {
+                      "const": "no-lz"
+                    }
+                  },
+                  "subscriptionName": {
+                    "type": "string"
+                  },
+                  "parentManagementGroupId": {
+                    "type": "string"
+                  },
+                  "billingProfileDisplayName": {
+                    "type": "string"
+                  },
+                  "invoiceSectionDisplayName": {
+                    "type": "string"
+                  }
                 }
               }
-            }
+            ]
           }
         }
       }
