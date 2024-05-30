@@ -5,7 +5,7 @@
   "description": "The schema for the configuration file for the 'delete-files' action.",
   "type": "object",
   "required": [
-    "patternsToExclude",
+    "directoriesToExclude",
     "filesToDelete"
   ],
   "properties": {
