@@ -14,12 +14,11 @@
       "description": "The reference to the json schema.",
       "format": "uri-reference"
     },
-    "patternsToExclude": {
+    "directoriesToExclude": {
       "type": "array",
-      "description": "A list of Regex patterns used to exclude files and directories from processing.",
+      "description": "A list of directory relative paths that should be excluded from processing. The '.git' directory is always excluded.",
       "items": {
-        "type": "string",
-        "format": "regex"
+        "type": "string"
       }
     },
     "filesToDelete": {
