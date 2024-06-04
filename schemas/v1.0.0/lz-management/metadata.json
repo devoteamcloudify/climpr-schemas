@@ -95,6 +95,9 @@
                   "subscriptionName": {
                     "type": "string"
                   },
+                  "subscriptionId": {
+                    "type": "string"
+                  },
                   "parentManagementGroupId": {
                     "type": "string"
                   },
