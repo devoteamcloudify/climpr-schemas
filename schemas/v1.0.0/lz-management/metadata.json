@@ -66,13 +66,18 @@
             "oneOf": [
               {
                 "required": [
-                  "archetype"
+                  "archetype",
+                  "deploymentSubscriptionId"
                 ],
                 "additionalProperties": false,
                 "properties": {
                   "archetype": {
                     "type": "string",
                     "const": "no-lz"
+                  },
+                  "deploymentSubscriptionId": {
+                    "type": "string",
+                    "format": "uuid"
                   }
                 }
               },
