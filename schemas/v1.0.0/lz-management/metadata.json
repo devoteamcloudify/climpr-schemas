@@ -67,23 +67,6 @@
               {
                 "required": [
                   "archetype",
-                  "deploymentSubscriptionId"
-                ],
-                "additionalProperties": false,
-                "properties": {
-                  "archetype": {
-                    "type": "string",
-                    "const": "no-lz"
-                  },
-                  "deploymentSubscriptionId": {
-                    "type": "string",
-                    "format": "uuid"
-                  }
-                }
-              },
-              {
-                "required": [
-                  "archetype",
                   "subscriptionName",
                   "parentManagementGroupId",
                   "billingProfileDisplayName",
@@ -111,6 +94,23 @@
                   },
                   "invoiceSectionDisplayName": {
                     "type": "string"
+                  }
+                }
+              },
+              {
+                "required": [
+                  "archetype",
+                  "deploymentSubscriptionId"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "archetype": {
+                    "type": "string",
+                    "const": "no-lz"
+                  },
+                  "deploymentSubscriptionId": {
+                    "type": "string",
+                    "format": "uuid"
                   }
                 }
               }
