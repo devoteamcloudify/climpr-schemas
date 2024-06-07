@@ -11,6 +11,10 @@
   ],
   "additionalProperties": false,
   "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri-reference"
+    },
     "name": {
       "type": "string",
       "maxLength": 24,
@@ -24,7 +28,6 @@
       "required": [
         "policyDefinitionId"
       ],
-      "additionalProperties": false,
       "allOf": [
         {
           "$ref": "https://schema.management.azure.com/schemas/2021-06-01/Microsoft.Authorization.Resources.json#/unknown_resourceDefinitions/policyAssignments/properties/properties"
@@ -87,7 +90,6 @@
       ]
     },
     "identity": {
-      "additionalProperties": false,
       "$ref": "https://schema.management.azure.com/schemas/2021-06-01/Microsoft.Authorization.Resources.json#/unknown_resourceDefinitions/policyAssignments/properties/identity",
       "required": [
         "type"
@@ -106,7 +108,6 @@
       }
     },
     "location": {
-      "additionalProperties": false,
       "$ref": "https://schema.management.azure.com/schemas/2021-06-01/Microsoft.Authorization.Resources.json#/unknown_resourceDefinitions/policyAssignments/properties/location"
     },
     "roleAssignments": {

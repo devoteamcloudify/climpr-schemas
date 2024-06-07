@@ -10,6 +10,10 @@
   ],
   "additionalProperties": false,
   "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri-reference"
+    },
     "name": {
       "type": "string",
       "description": "The name of the policy. The name is unique and cannot be changed afterwords. Recommendation: Use a GUID"
@@ -26,7 +30,6 @@
         "policyRule",
         "policyType"
       ],
-      "additionalProperties": false,
       "allOf": [
         {
           "anyOf": [

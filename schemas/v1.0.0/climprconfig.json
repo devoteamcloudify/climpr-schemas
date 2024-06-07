@@ -17,9 +17,6 @@
     "policyManagement": {
       "$ref": "./policy-management/climprconfig.policymanagement.json#"
     },
-    "quickstartManagement": {
-      "$ref": "./quickstart-management/climprconfig.quickstartmanagement.json#"
-    },
     "workloadManagement": {
       "$ref": "./workload-management/climprconfig.workloadmanagement.json#"
     },
