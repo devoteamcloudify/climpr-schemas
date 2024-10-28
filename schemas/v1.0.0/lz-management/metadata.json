@@ -36,6 +36,12 @@
     "access": {
       "$ref": "github-api.json#/$defs/access"
     },
+    "branchProtection": {
+      "$ref": "github-api.json#/$defs/branchProtection"
+    },
+    "codeOwners": {
+      "$ref": "github-api.json#/$defs/codeOwners"
+    },
     "environments": {
       "type": "array",
       "additionalProperties": false,
@@ -49,17 +55,11 @@
           "name": {
             "type": "string"
           },
-          "branchPolicyPatterns": {
-            "$ref": "github-api.json#/$defs/branchPolicyPatterns"
-          },
-          "branchProtection": {
-            "$ref": "github-api.json#/$defs/branchProtection"
-          },
-          "codeOwners": {
-            "$ref": "github-api.json#/$defs/codeOwners"
-          },
           "runProtection": {
             "$ref": "github-api.json#/$defs/runProtection"
+          },
+          "branchPolicyPatterns": {
+            "$ref": "github-api.json#/$defs/branchPolicyPatterns"
           },
           "azure": {
             "type": "object",
