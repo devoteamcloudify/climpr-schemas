@@ -15,10 +15,21 @@
           "properties": {
             "type": "object",
             "additionalProperties": false,
-            "properties": {
-              "type": "array",
-              "items": {
-                "type": "string"
+            "propertyNames": {
+              "enum": [
+                "pull",
+                "triage",
+                "push",
+                "maintain",
+                "maintain"
+              ]
+            },
+            "patternProperties": {
+              ".*": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -28,10 +39,21 @@
           "properties": {
             "type": "object",
             "additionalProperties": false,
-            "properties": {
-              "type": "array",
-              "items": {
-                "type": "string"
+            "propertyNames": {
+              "enum": [
+                "pull",
+                "triage",
+                "push",
+                "maintain",
+                "maintain"
+              ]
+            },
+            "patternProperties": {
+              ".*": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
