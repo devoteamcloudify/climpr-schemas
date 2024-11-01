@@ -5,7 +5,6 @@
   "description": "All properties related to the landing zone management feature configuration.",
   "type": "object",
   "required": [
-    "enabled",
     "defaultLocation",
     "rootManagementGroupId",
     "decommissionedManagementGroupId",
